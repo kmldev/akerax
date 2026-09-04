@@ -19,12 +19,12 @@ export default function ProjectsCarousel() {
 
   return (
     <section id="projects" className="relative h-screen w-full overflow-hidden">
-      <SceneCanvas camera={{ position: [0, 0, 7.4], fov: 45 }}>
+      <SceneCanvas camera={{ position: [0, 0.15, 9.2], fov: 40 }}>
         <color attach="background" args={["#010308"]} />
         <ambientLight intensity={0.5} />
         <pointLight position={[3, 2, 5]} intensity={26} color="#22d3ee" />
         <pointLight position={[-4, -1, 3]} intensity={16} color="#a855f7" />
-        <Sparkles count={70} scale={10} size={2} speed={0.35} color="#a855f7" />
+        <Sparkles count={40} scale={8} size={1.4} speed={0.28} color="#67e8f9" opacity={0.45} />
         <CarouselRig active={active} />
         <OrbitControls enableZoom={false} enablePan={false} />
       </SceneCanvas>

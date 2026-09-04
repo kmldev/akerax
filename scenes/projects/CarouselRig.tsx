@@ -13,7 +13,7 @@ export default function CarouselRig({ active }: CarouselRigProps) {
     () =>
       projects.map((_, index) => {
         const offset = index - active;
-        return [offset * 2.85, 0, Math.abs(offset) * -0.55] as [
+        return [offset * 2.55, 0, Math.abs(offset) * -0.85] as [
           number,
           number,
           number,
