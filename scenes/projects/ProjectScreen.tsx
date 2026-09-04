@@ -1,10 +1,10 @@
 "use client";
 
 import type { Project } from "@/lib/content";
-import { Html } from "@react-three/drei";
+import { Html, useTexture } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { useRef } from "react";
-import type { Group, Vector3Tuple } from "three";
+import { SRGBColorSpace, type Group, type Vector3Tuple } from "three";
 
 type ProjectScreenProps = {
   project: Project;
@@ -18,6 +18,10 @@ export default function ProjectScreen({
   active,
 }: ProjectScreenProps) {
   const frameRef = useRef<Group>(null);
+  const map = useTexture(project.image, (texture) => {
+    texture.colorSpace = SRGBColorSpace;
+    texture.anisotropy = 8;
+  });
 
   useFrame((_, delta) => {
     if (!frameRef.current) return;
@@ -30,30 +34,31 @@ export default function ProjectScreen({
   return (
     <group position={position}>
       <group ref={frameRef}>
-      <mesh>
-        <boxGeometry args={[2.2, 1.48, 0.1]} />
-        <meshStandardMaterial color="#07070e" metalness={0.75} roughness={0.28} />
-      </mesh>
-      <mesh position={[0, 0, 0.056]}>
-        <planeGeometry args={[1.95, 1.22]} />
-        <meshStandardMaterial
-          color="#101018"
-          emissive={project.accent}
-          emissiveIntensity={active ? 0.28 : 0.1}
-          metalness={0.15}
-          roughness={0.55}
-        />
-      </mesh>
+        <mesh>
+          <boxGeometry args={[2.22, 1.32, 0.1]} />
+          <meshStandardMaterial
+            color="#07070e"
+            emissive={project.accent}
+            emissiveIntensity={active ? 0.18 : 0.06}
+            metalness={0.75}
+            roughness={0.28}
+          />
+        </mesh>
+        <mesh position={[0, 0, 0.056]}>
+          <planeGeometry args={[2.05, 1.15]} />
+          <meshBasicMaterial map={map} toneMapped={false} />
+        </mesh>
       </group>
       <Html
+        position={[0, -0.82, 0.08]}
         center
-        distanceFactor={7.5}
+        distanceFactor={8}
         pointerEvents="none"
         zIndexRange={[10, 0]}
         wrapperClass="pointer-events-none"
       >
         <div
-          className={`w-40 rounded-lg border px-3 py-2 text-center backdrop-blur-md ${
+          className={`w-44 rounded-lg border px-3 py-2 text-center backdrop-blur-md ${
             active
               ? "border-cyan-300/50 bg-black/75 text-white"
               : "border-white/10 bg-black/55 text-zinc-200"

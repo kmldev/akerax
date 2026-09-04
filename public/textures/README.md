@@ -1,11 +1,9 @@
-# Textures
+# Textures projets
 
-Placez ici les captures d’écran des projets (PNG / JPG / WebP).
+Affiches 16:9 appliquées sur les écrans 3D du carrousel.
 
-Elles peuvent être appliquées sur les `planeGeometry` du carrousel :
-
-```tsx
-<meshStandardMaterial map={texture} />
-```
-
-Les cartes projets utilisent aujourd’hui des matériaux émissifs cyan / violet / vert.
+| Fichier | Projet |
+|---|---|
+| `cityquest.webp` | CITYQUEST by Yango (image IA) |
+| `evonpower.webp` | EVONPOWER (image IA) |
+| `ovowpp.webp` | OVOWPP.COM (visuel fourni) |

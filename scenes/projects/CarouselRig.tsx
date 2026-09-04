@@ -2,6 +2,7 @@
 
 import { projects } from "@/lib/content";
 import ProjectScreen from "@/scenes/projects/ProjectScreen";
+import { useTexture } from "@react-three/drei";
 import { useMemo } from "react";
 
 type CarouselRigProps = {
@@ -9,6 +10,8 @@ type CarouselRigProps = {
 };
 
 export default function CarouselRig({ active }: CarouselRigProps) {
+  useTexture(projects.map((project) => project.image));
+
   const positions = useMemo(
     () =>
       projects.map((_, index) => {

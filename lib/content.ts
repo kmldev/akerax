@@ -9,6 +9,7 @@ export type Project = {
   name: string;
   desc: string;
   accent: string;
+  image: string;
 };
 
 export const profile = {
@@ -59,16 +60,19 @@ export const projects: Project[] = [
     name: "CITYQUEST by Yango",
     desc: "Street-level QR Code Game Scanner in Casablanca",
     accent: "#22d3ee",
+    image: "/textures/cityquest.webp",
   },
   {
     name: "EVONPOWER",
     desc: "Management system for electric charging points",
     accent: "#a855f7",
+    image: "/textures/evonpower.webp",
   },
   {
     name: "OVOWPP.COM",
     desc: "WhatsApp Marketing SaaS & CRM",
     accent: "#4ade80",
+    image: "/textures/ovowpp.webp",
   },
 ];
 
