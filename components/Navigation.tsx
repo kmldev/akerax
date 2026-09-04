@@ -33,19 +33,22 @@ export default function Navigation() {
       transition={{ duration: 0.7, ease: cinematicEase }}
       className="fixed top-3 right-0 left-0 z-40 flex justify-center px-4"
     >
-      <nav className="flex w-full max-w-3xl items-center justify-between rounded-full border border-cyan-400/20 bg-black/55 px-4 py-2 shadow-[0_0_40px_rgba(34,211,238,0.12)] backdrop-blur-xl">
-        <a href="#hero" className="font-semibold tracking-wide text-cyan-300">
+      <nav className="flex w-full max-w-3xl items-center justify-between gap-2 rounded-full border border-cyan-400/20 bg-black/55 px-2 py-2 shadow-[0_0_40px_rgba(34,211,238,0.12)] backdrop-blur-xl sm:px-4">
+        <a
+          href="#hero"
+          className="shrink-0 text-sm font-semibold tracking-wide text-cyan-300 sm:text-base"
+        >
           {profile.name.split(" ")[0]}
           <span className="text-purple-400">.dev</span>
         </a>
-        <ul className="flex items-center gap-1 text-sm sm:gap-2">
+        <ul className="flex min-w-0 items-center justify-end gap-0.5 text-[11px] sm:gap-2 sm:text-sm">
           {navItems.map((item) => {
             const isActive = active === item.href;
             return (
-              <li key={item.href}>
+              <li key={item.href} className="shrink-0">
                 <a
                   href={item.href}
-                  className={`relative rounded-full px-3 py-1.5 transition ${
+                  className={`relative rounded-full px-2 py-1.5 transition sm:px-3 ${
                     isActive ? "text-white" : "text-zinc-400 hover:text-cyan-200"
                   }`}
                 >
