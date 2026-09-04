@@ -51,7 +51,7 @@ export default function ExperienceTimeline() {
         </SectionReveal>
 
         <div className="relative mt-16">
-          <div className="absolute top-0 bottom-0 left-4 w-px bg-gradient-to-b from-cyan-400 via-purple-500 to-green-400 md:left-1/2 md:-translate-x-px" />
+          <div className="pointer-events-none absolute top-2 bottom-2 left-4 w-[2px] bg-gradient-to-b from-cyan-400 via-purple-500 to-green-400 shadow-[0_0_12px_rgba(34,211,238,0.65)] md:left-1/2 md:-translate-x-[1px]" />
 
           <ol className="space-y-10">
             {jobs.map((job, index) => {
