@@ -29,7 +29,7 @@ export const jobs: Job[] = [
     role: "Full-Stack Developer",
     years: "2025 - May 2026",
     accent: "cyan",
-    logo: "/logos/bluedigital.webp",
+    logo: "/logos/bluedigital.webp?v=2",
   },
   {
     company: "HELLOWAT",
