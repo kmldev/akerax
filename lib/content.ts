@@ -3,6 +3,7 @@ export type Job = {
   role: string;
   years: string;
   accent: "cyan" | "purple" | "green";
+  logo: string;
 };
 
 export type Project = {
@@ -28,30 +29,35 @@ export const jobs: Job[] = [
     role: "Full-Stack Developer",
     years: "2025 - May 2026",
     accent: "cyan",
+    logo: "/logos/bluedigital.webp",
   },
   {
     company: "HELLOWAT",
     role: "Media Buyer",
     years: "2020 - 2021",
     accent: "purple",
+    logo: "/logos/hellowat.webp",
   },
   {
     company: "H2O SERVICES",
     role: "IT / Web",
     years: "2019 - 2020",
     accent: "green",
+    logo: "/logos/h2o-services.webp",
   },
   {
     company: "OPTIMGOV",
     role: "Full-Stack & Mobile Developer",
     years: "2018 - 2019",
     accent: "cyan",
+    logo: "/logos/optimgov.webp",
   },
   {
     company: "IRIZAR",
     role: "IT Expert (Freelance)",
     years: "2014 - 2024",
     accent: "purple",
+    logo: "/logos/irizar.webp",
   },
 ];
 

@@ -8,7 +8,7 @@ import TimelineCard from "@/scenes/timeline/TimelineCard";
 import { OrbitControls, Stars } from "@react-three/drei";
 
 export default function ExperienceTimeline() {
-  const spacing = 1.7;
+  const spacing = 1.95;
   const offset = ((jobs.length - 1) * spacing) / 2;
 
   return (

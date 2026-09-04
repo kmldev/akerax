@@ -20,7 +20,7 @@ export default function TimelineCard({ job, position }: TimelineCardProps) {
 
   return (
     <mesh position={position}>
-      <boxGeometry args={[2.35, 1.05, 0.18]} />
+      <boxGeometry args={[2.55, 1.28, 0.18]} />
       <meshPhysicalMaterial
         color="#2e1064"
         transparent
@@ -39,7 +39,15 @@ export default function TimelineCard({ job, position }: TimelineCardProps) {
         zIndexRange={[10, 0]}
         wrapperClass="pointer-events-none"
       >
-        <div className="w-44 rounded-xl border border-white/15 bg-black/55 px-3 py-2 text-center text-white shadow-[0_0_24px_rgba(168,85,247,0.25)] backdrop-blur-md">
+        <div className="w-52 rounded-xl border border-white/15 bg-black/60 px-3 py-2.5 text-center text-white shadow-[0_0_24px_rgba(168,85,247,0.25)] backdrop-blur-md">
+          <div className="mx-auto mb-2 flex h-11 items-center justify-center rounded-md bg-white px-2">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={job.logo}
+              alt={`${job.company} logo`}
+              className="h-9 w-auto max-w-[11rem] object-contain"
+            />
+          </div>
           <h2 className="text-sm font-bold tracking-wide">{job.company}</h2>
           <p className="text-xs text-zinc-200">{job.role}</p>
           <p className="mt-1 text-[11px]" style={{ color: accent }}>
