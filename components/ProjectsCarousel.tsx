@@ -19,7 +19,7 @@ export default function ProjectsCarousel() {
 
   return (
     <section id="projects" className="relative h-screen w-full overflow-hidden">
-      <SceneCanvas camera={{ position: [0, 0.15, 9.2], fov: 40 }}>
+      <SceneCanvas camera={{ position: [0, 0.15, 10], fov: 40 }}>
         <color attach="background" args={["#010308"]} />
         <ambientLight intensity={0.5} />
         <pointLight position={[3, 2, 5]} intensity={26} color="#22d3ee" />

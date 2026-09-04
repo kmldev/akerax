@@ -63,6 +63,12 @@ export const jobs: Job[] = [
 
 export const projects: Project[] = [
   {
+    name: "Eduex.digital",
+    desc: "Plateforme LMS IA pour organismes de formation",
+    accent: "#8B5CF6",
+    image: "/textures/eduex.webp",
+  },
+  {
     name: "CITYQUEST by Yango",
     desc: "Street-level QR Code Game Scanner in Casablanca",
     accent: "#22d3ee",
@@ -84,7 +90,7 @@ export const projects: Project[] = [
 
 export const navItems = [
   { href: "#hero", label: "Hero" },
-  { href: "#experience", label: "Experience" },
+  { href: "#experience", label: "Parcours" },
   { href: "#projects", label: "Projects" },
   { href: "#contact", label: "Contact" },
 ] as const;
