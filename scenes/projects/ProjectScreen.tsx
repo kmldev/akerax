@@ -37,7 +37,13 @@ export default function ProjectScreen({
         roughness={0.35}
         toneMapped={false}
       />
-      <Html center distanceFactor={6.5}>
+      <Html
+        center
+        distanceFactor={7.5}
+        pointerEvents="none"
+        zIndexRange={[10, 0]}
+        wrapperClass="pointer-events-none"
+      >
         <div
           className={`w-44 rounded-lg border px-3 py-2 text-center backdrop-blur-md ${
             active

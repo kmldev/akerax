@@ -53,7 +53,7 @@ export default function SceneCanvas({
   }
 
   return (
-    <div ref={hostRef} className={className ?? "h-full w-full"}>
+    <div ref={hostRef} className={`${className ?? "h-full w-full"} overflow-hidden`}>
       <Canvas
         dpr={[1, 1.75]}
         frameloop={visible ? "always" : "demand"}

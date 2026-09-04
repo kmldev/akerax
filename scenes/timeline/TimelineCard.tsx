@@ -32,7 +32,13 @@ export default function TimelineCard({ job, position }: TimelineCardProps) {
         emissive={accent}
         emissiveIntensity={0.18}
       />
-      <Html center distanceFactor={7} zIndexRange={[20, 0]}>
+      <Html
+        center
+        distanceFactor={8}
+        pointerEvents="none"
+        zIndexRange={[10, 0]}
+        wrapperClass="pointer-events-none"
+      >
         <div className="w-44 rounded-xl border border-white/15 bg-black/55 px-3 py-2 text-center text-white shadow-[0_0_24px_rgba(168,85,247,0.25)] backdrop-blur-md">
           <h2 className="text-sm font-bold tracking-wide">{job.company}</h2>
           <p className="text-xs text-zinc-200">{job.role}</p>
